@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public interface Writer {
+public interface IWriter {
 
 
     default void write(BufferedWriter bufferedWriter,String toWrite){

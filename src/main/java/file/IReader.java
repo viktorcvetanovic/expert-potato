@@ -2,7 +2,7 @@ package file;
 
 import java.io.*;
 // default implementations for reading File, we use this to cetralize our code for reading so we cant make mistake
-public interface Reader{
+public interface IReader {
 
 
     default String read(BufferedReader bufferedReader){

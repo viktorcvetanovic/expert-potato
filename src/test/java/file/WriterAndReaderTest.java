@@ -1,5 +1,7 @@
 package file;
 
+import file.impl.DefaultReader;
+import file.impl.DefaultWriter;
 import junit.framework.TestCase;
 import org.junit.Test;
 
@@ -14,7 +16,7 @@ public class WriterAndReaderTest extends TestCase {
 
     @Test
     public void testWrite(){
-        Writer writer = new Writer() {};
+        IWriter writer = new DefaultWriter();
         writer.write(fileName,filePath,textToWrite);
 
     }
@@ -22,7 +24,7 @@ public class WriterAndReaderTest extends TestCase {
 
     @Test
     public void testRead(){
-        Reader reader=new Reader() {};
+        IReader reader=new DefaultReader();
         String text=reader.read(fileName,filePath);
         assertEquals(textToWrite,text);
 
